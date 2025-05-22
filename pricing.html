@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing & Packages - LevelUp Ltd - Executive Coaching</title>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        color: #333;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      /* Utility classes - same as other pages */
+      .bg-blue-50 {
+        background-color: #f0f7ff;
+      }
+      .bg-blue-600 {
+        background-color: #2563eb;
+      }
+      .bg-blue-800 {
+        background-color: #1e40af;
+      }
+      .bg-orange-500 {
+        background-color: #f97316;
+      }
+      .bg-orange-600 {
+        background-color: #ea580c;
+      }
+      .bg-gray-50 {
+        background-color: #f9fafb;
+      }
+      .bg-gray-900 {
+        background-color: #111827;
+      }
+      .text-white {
+        color: #fff;
+      }
+      .text-blue-100 {
+        color: #dbeafe;
+      }
+      .text-blue-200 {
+        color: #bfdbfe;
+      }
+      .text-blue-600 {
+        color: #2563eb;
+      }
+      .text-orange-500 {
+        color: #f97316;
+      }
+      .text-orange-600 {
+        color: #ea580c;
+      }
+      .text-gray-400 {
+        color: #9ca3af;
+      }
+      .text-gray-600 {
+        color: #4b5563;
+      }
+      .text-gray-700 {
+        color: #374151;
+      }
+      .text-gray-900 {
+        color: #111827;
+      }
+      .font-medium {
+        font-weight: 500;
+      }
+      .font-semibold {
+        font-weight: 600;
+      }
+      .font-bold {
+        font-weight: 700;
+      }
+      .border {
+        border: 1px solid #e5e7eb;
+      }
+      .border-t {
+        border-top: 1px solid;
+      }
+      .border-b {
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .border-gray-800 {
+        border-color: #1f2937;
+      }
+      .rounded-md {
+        border-radius: 0.375rem;
+      }
+      .rounded-lg {
+        border-radius: 0.5rem;
+      }
+      .rounded-full {
+        border-radius: 9999px;
+      }
+
+      /* Header - same as other pages */
+      header {
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo-icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 9999px;
+        background-color: #2563eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo-text {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #2563eb;
+      }
+
+      .nav-links a {
+        margin-left: 1.5rem;
+        color: #4b5563;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: #f97316;
+      }
+
+      .header-cta {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .phone-link {
+        display: none;
+        align-items: center;
+        gap: 0.25rem;
+        color: #2563eb;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 1rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+
+      .btn-primary {
+        background-color: #2563eb;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: #1d4ed8;
+      }
+
+      .btn-orange {
+        background-color: #f97316;
+        color: white;
+      }
+
+      .btn-orange:hover {
+        background-color: #ea580c;
+      }
+
+      .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+      }
+
+      /* Page Header */
+      .page-header {
+        background-color: #f0f7ff;
+        padding: 3rem 0;
+        text-align: center;
+      }
+
+      .page-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 1rem;
+      }
+
+      .page-description {
+        font-size: 1.25rem;
+        color: #4b5563;
+        max-width: 48rem;
+        margin: 0 auto;
+      }
+
+      /* Blog Content Sections */
+      .section {
+        padding: 4rem 0;
+      }
+
+      .section:nth-child(even) {
+        background-color: #f9fafb;
+      }
+
+      .section-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-paragraph {
+        color: #4b5563;
+        margin-bottom: 1rem;
+        line-height: 1.7;
+      }
+
+      /* Blog specific styles */
+      .blog-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .blog-container {
+          flex-direction: row;
+        }
+
+        .blog-main {
+          flex: 2;
+        }
+
+        .blog-sidebar {
+          flex: 1;
+        }
+      }
+
+      /* Featured Post */
+      .featured-post {
+        background-color: white;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+      }
+
+      .featured-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .featured-content {
+        padding: 1.5rem;
+      }
+
+      .featured-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #111827;
+      }
+
+      .featured-excerpt {
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Post cards */
+      .post-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      @media (min-width: 640px) {
+        .post-list {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      .post-card {
+        background-color: white;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+
+      .post-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .post-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .post-content {
+        padding: 1.5rem;
+      }
+
+      .post-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #111827;
+      }
+
+      .post-meta {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        font-size: 0.875rem;
+        color: #6b7280;
+      }
+
+      .post-category {
+        background-color: #f0f7ff;
+        color: #2563eb;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+
+      .post-excerpt {
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Sidebar styles */
+      .blog-sidebar {
+        position: sticky;
+        top: 2rem;
+      }
+
+      .sidebar-box {
+        background-color: white;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .sidebar-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #111827;
+      }
+
+      .search-form {
+        display: flex;
+        margin-bottom: 1rem;
+      }
+
+      .search-input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #d1d5db;
+        border-right: none;
+        border-top-left-radius: 0.375rem;
+        border-bottom-left-radius: 0.375rem;
+        font-family: inherit;
+        font-size: 0.875rem;
+      }
+
+      .search-button {
+        background-color: #2563eb;
+        color: white;
+        border: none;
+        padding: 0 0.75rem;
+        border-top-right-radius: 0.375rem;
+        border-bottom-right-radius: 0.375rem;
+        cursor: pointer;
+      }
+
+      .category-list,
+      .recent-list,
+      .archive-list {
+        list-style: none;
+      }
+
+      .category-list li,
+      .recent-list li,
+      .archive-list li {
+        margin-bottom: 0.75rem;
+      }
+
+      .category-list a,
+      .recent-list a,
+      .archive-list a {
+        color: #4b5563;
+        transition: color 0.2s;
+      }
+
+      .category-list a:hover,
+      .recent-list a:hover,
+      .archive-list a:hover {
+        color: #2563eb;
+      }
+
+      .category-count {
+        background-color: #f3f4f6;
+        color: #6b7280;
+        padding: 0.125rem 0.375rem;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+        margin-left: 0.5rem;
+      }
+
+      .newsletter-box {
+        background-color: #f0f7ff;
+      }
+
+      .newsletter-input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.375rem;
+        font-family: inherit;
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Footer - same as other pages */
+      .footer {
+        background-color: #111827;
+        color: white;
+        padding: 3rem 0;
+      }
+
+      .footer-container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer-main {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .footer-logo-icon {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 9999px;
+        background-color: #2563eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.5rem;
+      }
+
+      .footer-description {
+        color: #9ca3af;
+        max-width: 20rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      .footer-links-column h3 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .footer-links-column ul {
+        list-style: none;
+      }
+
+      .footer-links-column li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links-column a {
+        color: #9ca3af;
+        transition: color 0.2s;
+      }
+
+      .footer-links-column a:hover {
+        color: white;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        align-items: center;
+        color: #9ca3af;
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-contact-item svg {
+        margin-right: 0.5rem;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #1f2937;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-copyright {
+        color: #9ca3af;
+        margin-bottom: 1rem;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .footer-social a {
+        color: #9ca3af;
+        transition: color 0.2s;
+      }
+
+      .footer-social a:hover {
+        color: white;
+      }
+
+      /* Pricing specific styles */
+      .pricing-container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .phase-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #111827;
+        margin: 2rem 0 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #f0f7ff;
+      }
+
+      .service-box {
+        background-color: white;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+      }
+
+      .service-header {
+        background-color: #f0f7ff;
+        padding: 1.5rem;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .service-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #2563eb;
+        margin-bottom: 0.5rem;
+      }
+
+      .service-description {
+        color: #4b5563;
+      }
+
+      .service-content {
+        padding: 1.5rem;
+      }
+
+      .package-list {
+        margin: 1.5rem 0;
+      }
+
+      .package-item {
+        padding: 1rem 0;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .package-item:last-child {
+        border-bottom: none;
+      }
+
+      .package-name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #111827;
+        margin-bottom: 0.5rem;
+      }
+
+      .package-description {
+        color: #4b5563;
+        margin-bottom: 0.5rem;
+      }
+
+      .price-tag {
+        display: inline-block;
+        background-color: #f0f7ff;
+        color: #2563eb;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-weight: 500;
+        margin-top: 0.5rem;
+      }
+
+      .highlight-box {
+        background-color: #f0f7ff;
+        border-left: 4px solid #2563eb;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        border-radius: 0.25rem;
+      }
+
+      .cta-box {
+        background-color: #f97316;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        margin: 2rem 0;
+      }
+
+      .cta-box h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .feature-list {
+        list-style-type: none;
+        margin: 1rem 0;
+      }
+
+      .feature-list li {
+        margin-bottom: 0.75rem;
+        padding-left: 1.75rem;
+        position: relative;
+      }
+
+      .feature-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #2563eb;
+        font-weight: bold;
+      }
+
+      .future-services {
+        background-color: #f9fafb;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        margin: 1.5rem 0;
+      }
+
+      .future-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #111827;
+        margin-bottom: 1rem;
+      }
+
+      /* Responsive styles */
+      @media (min-width: 768px) {
+        .section-inner {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .nav-links {
+          display: flex;
+        }
+
+        .phone-link {
+          display: flex;
+        }
+
+        .footer-main {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .footer-info {
+          margin-right: 3rem;
+        }
+
+        .footer-links {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .footer-bottom {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .footer-copyright {
+          margin-bottom: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="border-b">
+      <div class="container header-container">
+        <div class="logo">
+          <div class="logo-icon">
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              stroke="white"
+              stroke-width="2"
+              fill="none"
+            >
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <span class="logo-text">LevelUp Ltd</span>
+        </div>
+
+        <div class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="detail-services.html">Detail Services</a>
+          <a href="services-overview.html">Services Overview</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+          <a href="pricing.html" class="text-orange-500">Pricing</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section
+      class="page-header"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      "
+    >
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(240, 247, 255, 0.85);
+        "
+      ></div>
+      <div class="container" style="position: relative; z-index: 1">
+        <h1 class="page-title">
+          Investing in Your Transformation: Our Pricing & Packages
+        </h1>
+        <p class="page-description">
+          Your Growth is a Valuable Journey. Let's Navigate It Together.
+        </p>
+      </div>
+    </section>
+
+    <!-- Pricing Content Section -->
+    <section class="section">
+      <div class="container pricing-container">
+        <div class="section-paragraph">
+          At LevelUp Ltd, we believe that investing in your personal and
+          professional development is one of the most significant steps you can
+          take toward achieving profound clarity, enhanced capacity, and lasting
+          impact. Our pricing reflects the depth of expertise, personalized
+          attention, and transformative value embedded in each of our offerings.
+        </div>
+
+        <div class="section-paragraph">
+          We understand that individual and organizational needs vary, and we
+          strive to provide transparent pathways to engage with our services.
+        </div>
+
+        <h2 class="phase-title">
+          Phase 1 Offerings: Your Path to Personal Mastery & Leadership
+          Excellence
+        </h2>
+
+        <!-- Executive Coaching -->
+        <div class="service-box">
+          <div class="service-header">
+            <h3 class="service-title">Executive Coaching</h3>
+            <p class="service-description">
+              Our executive coaching is a deeply personalized and high-touch
+              experience, designed as a "change management of oneself" to help
+              you achieve profound self-mastery and enhance your leadership
+              capabilities.
+            </p>
+          </div>
+
+          <div class="service-content">
+            <p>
+              Tailored Coaching Engagements: We primarily offer comprehensive
+              coaching packages to support your transformative journey.
+              Specifics are determined after understanding your unique goals.
+            </p>
+
+            <p>
+              Coaching fees can be structured via hourly rates or, more
+              commonly, through package deals for individual or group coaching
+              programs.
+            </p>
+
+            <div class="highlight-box">
+              <p>
+                <strong>Complimentary Discovery Call:</strong> The first step is
+                a no-obligation Discovery Call. This allows us to understand
+                your aspirations, discuss how our approach can support you, and
+                determine the most suitable coaching engagement. Following this
+                call, we will provide a tailored proposal.
+              </p>
+            </div>
+
+            <h4 style="margin-top: 1.5rem">
+              Example Coaching Package Focus Areas
+            </h4>
+            <p style="font-style: italic; color: #6b7280">
+              Specifics and investment details discussed post-Discovery Call
+            </p>
+
+            <div class="package-list">
+              <div class="package-item">
+                <h5 class="package-name">
+                  Ignite Your Clarity (3-Month Foundation Program)
+                </h5>
+                <p class="package-description">
+                  Focused on intensive self-discovery, purpose definition, and
+                  foundational leadership skills.
+                </p>
+              </div>
+
+              <div class="package-item">
+                <h5 class="package-name">
+                  Accelerate Your Impact (6-Month Transformation Program)
+                </h5>
+                <p class="package-description">
+                  Deeper work on strategic alignment, enhancing leadership
+                  capacity, and navigating complex challenges.
+                </p>
+              </div>
+
+              <div class="package-item">
+                <h5 class="package-name">
+                  Master Your Leadership (9-12 Month Sustained Growth Program)
+                </h5>
+                <p class="package-description">
+                  Comprehensive development, embedding transformative practices
+                  for long-term, resilient leadership.
+                </p>
+              </div>
+            </div>
+
+            <a href="contact.html" class="btn btn-primary">
+              Schedule Your Complimentary Discovery Call
+            </a>
+          </div>
+        </div>
+
+        <!-- E-Courses -->
+        <div class="service-box">
+          <div class="service-header">
+            <h3 class="service-title">E-Courses</h3>
+            <p class="service-description">
+              Empower your learning journey with our expertly crafted e-courses,
+              designed to distill our unique methodologies for self-mastery,
+              strategic clarity, and value-driven leadership.
+            </p>
+          </div>
+
+          <div class="service-content">
+            <p>
+              Our e-courses are typically available via a one-time purchase.
+              Subscription models may be considered for future digital content
+              offerings.
+            </p>
+
+            <div class="package-list">
+              <div class="package-item">
+                <h5 class="package-name">Foundations of Self-Mastery</h5>
+                <p class="package-description">
+                  Discover the core principles and practices that lead to
+                  greater self-awareness, emotional intelligence, and authentic
+                  leadership presence.
+                </p>
+                <span class="price-tag">$397 (One-time purchase)</span>
+              </div>
+
+              <div class="package-item">
+                <h5 class="package-name">
+                  Strategic Clarity for Purpose-Driven Leaders
+                </h5>
+                <p class="package-description">
+                  Learn how to align your vision, values, and actions to create
+                  meaningful impact and achieve sustainable success in your
+                  leadership journey.
+                </p>
+                <span class="price-tag">$497 (One-time purchase)</span>
+              </div>
+
+              <div class="package-item">
+                <h5 class="package-name">
+                  Complete Leadership Transformation Bundle
+                </h5>
+                <p class="package-description">
+                  Get both our flagship courses at a special bundle price,
+                  providing a comprehensive pathway to leadership excellence.
+                </p>
+                <span class="price-tag">$797 (Save $97)</span>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn-primary">
+              Explore Our E-Course Catalog
+            </a>
+          </div>
+        </div>
+
+        <!-- Phase 2 Offerings -->
+        <h2 class="phase-title">
+          Phase 2 Offerings: Empowering Organizational Excellence (Future Focus)
+        </h2>
+
+        <div class="section-paragraph">
+          As LevelUp Ltd expands, we will introduce a suite of services aimed at
+          fostering operational excellence, value-aligned transformation, and
+          strategic talent optimization within organizations.
+        </div>
+
+        <div class="future-services">
+          <h4 class="future-title">
+            SaaS Subscriptions (For our future BI Platform)
+          </h4>
+          <p>
+            Access to our Business Intelligence platform will be offered via
+            tiered pricing based on features, user numbers, or data volume.
+            Detailed plans will be released closer to launch.
+          </p>
+        </div>
+
+        <div class="future-services">
+          <h4 class="future-title">Consulting Project Fees</h4>
+          <p>
+            For engagements in business modeling, change management, leadership
+            development, operational improvements (including supply
+            chain/manufacturing analytics), and strategic advisory, we will
+            offer fixed-price contracts or retainer agreements. These will be
+            customized based on project scope and deliverables.
+          </p>
+        </div>
+
+        <div class="future-services">
+          <h4 class="future-title">Talent Assessment & Recruitment Fees</h4>
+          <p>
+            Our services for strategic talent assessment and recruitment will be
+            structured with project-based or percentage fees.
+          </p>
+        </div>
+
+        <div style="text-align: center; margin: 2rem 0">
+          <p style="margin-bottom: 1rem">
+            Interested in our upcoming organizational services?
+          </p>
+          <a href="contact.html" class="btn btn-primary">
+            Contact Us to Discuss Future Needs
+          </a>
+          <span style="margin: 0 0.5rem">or</span>
+          <a href="#" class="btn btn-orange"> Join Our Phase 2 Mailing List </a>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-box">
+          <h3>Ready to Invest in Your Next Level?</h3>
+          <p>
+            Your journey towards profound clarity, unshakeable confidence, and
+            impactful leadership is an investment that yields lifelong returns.
+            Let's discuss how our services at LevelUp Ltd can be tailored to
+            support your unique aspirations.
+          </p>
+          <a
+            href="contact.html"
+            class="btn btn-primary btn-lg"
+            style="margin-top: 1rem; background-color: white; color: #f97316"
+            >Start Your Transformation Journey</a
+          >
+        </div>
+
+        <!-- Why Invest Section -->
+        <div style="margin: 3rem 0">
+          <h3 class="section-title" style="text-align: center">
+            Why Invest in Leadership Development?
+          </h3>
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 2rem;
+              margin-top: 2rem;
+            "
+          >
+            <div>
+              <h4
+                style="
+                  font-size: 1.25rem;
+                  font-weight: 600;
+                  color: #2563eb;
+                  margin-bottom: 1rem;
+                "
+              >
+                The ROI of Personal Transformation
+              </h4>
+              <ul class="feature-list">
+                <li>
+                  Enhanced decision-making capabilities that impact both
+                  professional outcomes and personal fulfillment
+                </li>
+                <li>
+                  Improved emotional intelligence leading to stronger
+                  relationships and team dynamics
+                </li>
+                <li>Greater resilience in the face of challenges and change</li>
+                <li>
+                  Clearer strategic vision aligned with authentic personal
+                  values
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4
+                style="
+                  font-size: 1.25rem;
+                  font-weight: 600;
+                  color: #2563eb;
+                  margin-bottom: 1rem;
+                "
+              >
+                Our Commitment to Your Success
+              </h4>
+              <ul class="feature-list">
+                <li>
+                  Personalized approach tailored to your specific leadership
+                  context and goals
+                </li>
+                <li>
+                  Evidence-based methodologies combined with practical,
+                  actionable strategies
+                </li>
+                <li>Ongoing support throughout your transformation journey</li>
+                <li>
+                  Focus on sustainable growth that continues long after our
+                  formal engagement ends
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-main">
+          <div class="footer-info">
+            <div class="footer-logo">
+              <div class="footer-logo-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"
+                >
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <span class="font-bold">LevelUp Ltd</span>
+            </div>
+
+            <p class="footer-description">
+              Empowering leaders through authentic personal transformation and
+              strategic clarity since 2020.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-links-column">
+              <h3>Navigation</h3>
+              <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services-overview.html">Our Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-column">
+              <h3>Services</h3>
+              <ul>
+                <li><a href="detail-services.html">Executive Coaching</a></li>
+                <li>
+                  <a href="detail-services.html">Leadership Development</a>
+                </li>
+                <li>
+                  <a href="detail-services.html" style="color: #f97316"
+                    >Personal Transformation</a
+                  >
+                </li>
+                <li>
+                  <a href="detail-services.html">Organizational Excellence</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-links-column">
+              <h3>Contact</h3>
+              <div class="footer-contact-item">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <a href="mailto:connect@levelupltd.com"
+                  >connect@levelupltd.com</a
+                >
+              </div>
+              <div class="footer-contact-item">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012 4.18 2 2 0 014 2h3a2 2 0 012 1.72c.13.98.42 1.94.86 2.83a2 2 0 01-.45 2.11L8 10a16 16 0 006 6l1.8-1.8a2 2 0 012.41-.1c.84.4 1.74.66 2.67.78A2 2 0 0122 16.92z"
+                  />
+                </svg>
+                <a href="tel:5551234567">555-123-4567</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            ©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            LevelUp Ltd. All rights reserved.
+          </p>
+          <div class="footer-social">
+            <a href="#">
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"
+                />
+              </svg>
+            </a>
+            <a href="#">
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Form submission handling
+      document.addEventListener("DOMContentLoaded", function () {
+        // Current year for copyright
+        const yearElements = document.querySelectorAll(".current-year");
+        yearElements.forEach(function (element) {
+          element.textContent = new Date().getFullYear();
+        });
+
+        // Join mailing list button
+        const mailingListBtn = document.querySelector('a[href="#"].btn-orange');
+        if (mailingListBtn) {
+          mailingListBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            alert(
+              "Thanks for your interest! The mailing list functionality would be implemented here."
+            );
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
