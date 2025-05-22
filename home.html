@@ -903,8 +903,30 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-      <div class="container hero-container">
+    <section
+      class="hero"
+      id="home"
+      style="
+        background-image: url('https://cdn.pixabay.com/photo/2018/03/10/12/00/paper-3213924_1280.jpg');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      "
+    >
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(240, 247, 255, 0.9);
+        "
+      ></div>
+      <div
+        class="container hero-container"
+        style="position: relative; z-index: 1"
+      >
         <div class="hero-content">
           <h1 class="hero-title">Master Yourself. Transform Your Impact.</h1>
           <p class="hero-description">
@@ -1218,22 +1240,16 @@
     <section class="about" id="about">
       <div class="container about-container">
         <div class="about-video">
-          <div class="video-wrapper">
-            <div class="video-placeholder">
-              <svg
-                class="play-icon"
-                viewBox="0 0 24 24"
-                width="64"
-                height="64"
-                stroke="currentColor"
-                stroke-width="1.5"
-                fill="none"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <polygon points="10 8 16 12 10 16 10 8" />
-              </svg>
-            </div>
-          </div>
+          <img
+            src="https://cdn.pixabay.com/photo/2019/04/26/07/14/business-4156358_1280.jpg"
+            alt="Leadership Transformation"
+            style="
+              width: 100%;
+              max-width: 100%;
+              border-radius: 0.5rem;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            "
+          />
         </div>
 
         <div class="about-content">
@@ -1288,7 +1304,7 @@
 
           <div class="about-author">
             <img
-              src="/api/placeholder/64/64"
+              src="https://cdn.pixabay.com/photo/2018/02/16/14/38/portrait-3157821_1280.jpg"
               alt="Leadership Coach"
               class="author-image"
             />
@@ -1326,8 +1342,8 @@
 
           <div class="testimonial-author">
             <img
-              src="/api/placeholder/48/48"
-              alt="Client"
+              src="https://cdn.pixabay.com/photo/2018/01/21/14/16/woman-3096664_1280.jpg"
+              alt="Sarah Chen"
               class="testimonial-author-image"
             />
             <div class="testimonial-author-info">
@@ -1350,7 +1366,16 @@
     <section
       class="contact"
       id="contact"
-      style="background: linear-gradient(135deg, #2563eb 0%, #f97316 100%)"
+      style="
+        background: linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.9) 0%,
+            rgba(249, 115, 22, 0.9) 100%
+          ),
+          url('https://cdn.pixabay.com/photo/2017/07/31/11/31/laptop-2557571_1280.jpg');
+        background-size: cover;
+        background-position: center;
+      "
     >
       <div class="container contact-container">
         <h2 class="contact-title">Ready to Unlock Your Full Potential?</h2>

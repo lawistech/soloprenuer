@@ -530,8 +530,26 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
-      <div class="container">
+    <section
+      class="page-header"
+      style="
+        background-image: url('https://cdn.pixabay.com/photo/2019/10/25/19/18/dashboard-4577517_1280.jpg');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      "
+    >
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(240, 247, 255, 0.85);
+        "
+      ></div>
+      <div class="container" style="position: relative; z-index: 1">
         <h1 class="page-title">About LevelUp Ltd</h1>
         <p class="page-description">
           Our story, mission, and the transformation-focused approach that
@@ -564,8 +582,13 @@
           </div>
           <div class="section-image">
             <img
-              src="https://via.placeholder.com/500x350"
+              src="https://cdn.pixabay.com/photo/2018/04/07/08/28/notepad-3297994_1280.jpg"
               alt="LevelUp Ltd Founding"
+              style="
+                width: 100%;
+                border-radius: 0.5rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              "
             />
           </div>
         </div>
@@ -578,8 +601,13 @@
         <div class="section-inner">
           <div class="section-image">
             <img
-              src="https://via.placeholder.com/500x350"
+              src="https://cdn.pixabay.com/photo/2015/01/08/18/26/man-593333_1280.jpg"
               alt="Our Coaching Methodology"
+              style="
+                width: 100%;
+                border-radius: 0.5rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              "
             />
           </div>
           <div class="section-content">
@@ -624,7 +652,12 @@
 
         <div class="team-grid">
           <div class="team-member">
-            <div class="team-image"></div>
+            <img
+              src="https://cdn.pixabay.com/photo/2017/08/01/08/29/woman-2563491_1280.jpg"
+              alt="Alexandra Mitchell"
+              class="team-image"
+              style="object-fit: cover"
+            />
             <h3 class="team-name">Alexandra Mitchell</h3>
             <p class="team-title">Founder & Lead Executive Coach</p>
             <p>
@@ -634,7 +667,12 @@
           </div>
 
           <div class="team-member">
-            <div class="team-image"></div>
+            <img
+              src="https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg"
+              alt="Marcus Chen"
+              class="team-image"
+              style="object-fit: cover"
+            />
             <h3 class="team-name">Marcus Chen</h3>
             <p class="team-title">Executive Coach & Strategy Specialist</p>
             <p>
@@ -644,7 +682,12 @@
           </div>
 
           <div class="team-member">
-            <div class="team-image"></div>
+            <img
+              src="https://cdn.pixabay.com/photo/2019/02/11/20/20/woman-3990680_1280.jpg"
+              alt="Sophia Rodriguez"
+              class="team-image"
+              style="object-fit: cover"
+            />
             <h3 class="team-name">Sophia Rodriguez</h3>
             <p class="team-title">Leadership Development Facilitator</p>
             <p>
@@ -684,17 +727,32 @@
             </p>
           </div>
           <div class="section-image">
-            <img src="https://via.placeholder.com/500x350" alt="Our Values" />
+            <img
+              src="https://cdn.pixabay.com/photo/2016/11/19/15/32/businesswoman-1839191_1280.jpg"
+              alt="Our Values"
+              style="
+                width: 100%;
+                border-radius: 0.5rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              "
+            />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section - Add background image with gradient overlay -->
     <section
       class="section"
       style="
-        background: linear-gradient(135deg, #2563eb 0%, #f97316 100%);
+        background: linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.9) 0%,
+            rgba(249, 115, 22, 0.9) 100%
+          ),
+          url('https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg');
+        background-size: cover;
+        background-position: center;
         color: white;
       "
     >
