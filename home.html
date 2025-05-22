@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YourName - Professional Services</title>
+    <title>LevelUp Ltd - Executive Coaching & Leadership Transformation</title>
     <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
@@ -259,7 +259,7 @@
         font-size: 1.25rem;
         color: #374151;
         margin-bottom: 2rem;
-        max-width: 36rem;
+        max-width: 42rem;
       }
 
       .hero-cta {
@@ -290,7 +290,7 @@
         padding: 1.5rem;
         border-radius: 0.5rem;
         color: white;
-        max-width: 24rem;
+        max-width: 28rem;
         width: 100%;
       }
 
@@ -310,13 +310,39 @@
       }
 
       .feature-content h3 {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
         font-weight: 600;
         margin-bottom: 0.5rem;
       }
 
       .feature-content p {
         color: #dbeafe;
+        font-size: 0.95rem;
+      }
+
+      /* Challenge Section */
+      .challenge {
+        padding: 4rem 0;
+        background-color: #f9fafb;
+      }
+
+      .challenge-content {
+        max-width: 48rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .challenge-title {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 1.5rem;
+      }
+
+      .challenge-description {
+        font-size: 1.125rem;
+        color: #374151;
+        line-height: 1.7;
       }
 
       /* Services Section */
@@ -336,11 +362,19 @@
         margin-bottom: 1rem;
       }
 
+      .section-subtitle {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #2563eb;
+        margin-bottom: 1rem;
+      }
+
       .section-description {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
         color: #4b5563;
-        max-width: 42rem;
+        max-width: 48rem;
         margin: 0 auto;
+        line-height: 1.7;
       }
 
       .services-grid {
@@ -351,18 +385,19 @@
       }
 
       .service-card {
-        padding: 1.5rem;
+        padding: 2rem;
         border-radius: 0.5rem;
       }
 
       .service-card h3 {
         font-size: 1.25rem;
         font-weight: 600;
-        margin: 1rem 0 0.5rem;
+        margin: 1rem 0 0.75rem;
       }
 
       .service-card p {
         margin-bottom: 1rem;
+        line-height: 1.6;
       }
 
       .card-blue {
@@ -393,6 +428,33 @@
 
       .services-cta {
         text-align: center;
+      }
+
+      .service-list {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+
+      .service-list li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .service-list li::before {
+        content: "•";
+        color: #f97316;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .card-blue .service-list li::before {
+        color: #bfdbfe;
       }
 
       /* About Section */
@@ -439,7 +501,7 @@
       }
 
       .about-content {
-        max-width: 32rem;
+        max-width: 40rem;
       }
 
       .about-label {
@@ -469,6 +531,7 @@
       .about-description {
         color: #374151;
         margin-bottom: 2rem;
+        line-height: 1.7;
       }
 
       .about-author {
@@ -727,7 +790,7 @@
         }
 
         .services-grid {
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
         }
 
         .about-container {
@@ -794,19 +857,17 @@
               stroke-width="2"
               fill="none"
             >
-              <path
-                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12s4.48 10 10 10 10-4.48 10-10z"
-              />
-              <path d="M8 14s1.5 2 4 2 4-2 4-2" />
-              <line x1="9" y1="9" x2="9.01" y2="9" />
-              <line x1="15" y1="9" x2="15.01" y2="9" />
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
             </svg>
           </div>
-          <span class="logo-text">YourName</span>
+          <span class="logo-text">LevelUp Ltd</span>
         </div>
 
         <div class="nav-links">
-          <a href="#services">Services</a>
+          <a href="#">Home</a>
+          <a href="#services">Coaching</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </div>
@@ -828,7 +889,7 @@
             <span class="text-sm">555-123-4567</span>
           </div>
           <a href="#contact" class="btn btn-primary">
-            <span>Get Started</span>
+            <span>Start Your Journey</span>
             <svg
               viewBox="0 0 24 24"
               width="16"
@@ -850,14 +911,16 @@
     <section class="hero" id="home">
       <div class="container hero-container">
         <div class="hero-content">
-          <h1 class="hero-title">Authentic Growth. Real Results.</h1>
+          <h1 class="hero-title">Master Yourself. Transform Your Impact.</h1>
           <p class="hero-description">
-            Build your business authentically, connect deeply, and drive
-            measurable growth.
+            True leadership and lasting success begin with profound personal
+            transformation. At LevelUp Ltd, we guide you through the essential
+            first step: the change management of oneself. This is where your
+            journey to enhanced capacity and strategic clarity starts.
           </p>
           <div class="hero-cta">
             <a href="#contact" class="btn btn-orange btn-lg">
-              Discover Your Growth Path
+              Begin Your Transformation
               <svg
                 viewBox="0 0 24 24"
                 width="16"
@@ -884,7 +947,7 @@
                 <circle cx="12" cy="12" r="10" />
                 <polygon points="10 8 16 12 10 16 10 8" />
               </svg>
-              Watch my story
+              Learn Our Approach
             </a>
           </div>
         </div>
@@ -905,10 +968,10 @@
               </svg>
             </div>
             <div class="feature-content">
-              <h3>It Starts With You.</h3>
+              <h3>Personal Mastery First</h3>
               <p>
-                Your unique vision and values are the foundation for lasting
-                connections.
+                Deep self-awareness and authentic leadership development from
+                the inside out.
               </p>
             </div>
           </div>
@@ -923,18 +986,44 @@
                 stroke-width="2"
                 fill="none"
               >
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
               </svg>
             </div>
             <div class="feature-content">
-              <h3>Connect & Convert.</h3>
+              <h3>Strategic Clarity</h3>
               <p>
-                We guide your customers on an authentic journey that converts
-                interest into loyal clients.
+                Transform inner clarity into powerful leadership capacity and
+                impactful decision-making.
               </p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="challenge">
+      <div class="container">
+        <div class="challenge-content">
+          <h2 class="challenge-title">Are You Ready to Lead from Within?</h2>
+          <p class="challenge-description">
+            In a world demanding constant adaptation and impactful leadership,
+            the most powerful changes don't start with new strategies or
+            processes, but with <em>you</em>. You might be a purpose-driven
+            professional, an emerging leader, or a seasoned executive feeling
+            the pull towards greater alignment and effectiveness. You recognize
+            that to truly elevate your impact, you must first understand and
+            master your own inner landscape.
+          </p>
+          <br />
+          <p class="challenge-description">
+            This is more than just skill development; it's about unlocking
+            profound self-mastery and clarity. It's the foundational work that
+            allows you to lead with intention and navigate complexities with
+            unshakeable confidence.
+          </p>
         </div>
       </div>
     </section>
@@ -943,10 +1032,14 @@
     <section class="services" id="services">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Services Tailored for You</h2>
+          <h2 class="section-title">
+            Your Transformation is Our Starting Point
+          </h2>
           <p class="section-description">
-            Specialized solutions designed to help solopreneurs like you succeed
-            in today's competitive market.
+            At LevelUp Ltd, we begin with the individual—because personal
+            evolution is the bedrock of all genuine leadership and
+            organizational excellence. Our executive coaching is designed as a
+            deeply personal journey of "change management of oneself."
           </p>
         </div>
 
@@ -961,31 +1054,30 @@
                 stroke-width="1.5"
                 fill="none"
               >
-                <path d="M3 3v18h18" />
-                <path d="M18.4 8.64L8.78 18.26" />
-                <path d="M18.4 15.44V8.64h-6.8" />
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
               </svg>
             </div>
-            <h3>Business Growth Strategy</h3>
-            <p>
-              Custom strategies to identify opportunities and scale your
-              business effectively.
-            </p>
-            <a href="#" class="inline-flex items-center">
-              Learn more
-              <svg
-                viewBox="0 0 24 24"
-                width="16"
-                height="16"
-                stroke="currentColor"
-                stroke-width="2"
-                fill="none"
-                style="margin-left: 0.25rem"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
+            <h3>Executive Coaching Programs</h3>
+            <p>Through our dedicated coaching, we help you:</p>
+            <ul class="service-list">
+              <li>
+                <strong>Profound Self-Mastery & Clarity:</strong> Gain
+                transformative understanding of your self, identity, and purpose
+              </li>
+              <li>
+                <strong>Enhanced Leadership Capacity:</strong> Acquire tools to
+                manage yourself and inspire teams effectively
+              </li>
+              <li>
+                <strong>Strategic Alignment:</strong> Bridge personal values
+                with professional goals
+              </li>
+              <li>
+                <strong>Unshakeable Confidence:</strong> Develop resilience in
+                decision-making and change leadership
+              </li>
+            </ul>
           </div>
 
           <div class="service-card card-white">
@@ -998,59 +1090,19 @@
                 stroke-width="1.5"
                 fill="none"
               >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 6v6l4 2" />
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
               </svg>
             </div>
-            <h3>Digital Marketing</h3>
+            <h3>Personal Transformation Journey</h3>
             <p>
-              Results-driven digital marketing to boost your online presence and
-              attract clients.
+              We empower you to transcend the day-to-day noise and embrace your
+              authentic leadership identity, where every decision is intentional
+              and every challenge an opportunity for growth.
             </p>
-            <a href="#" class="inline-flex items-center">
-              Learn more
-              <svg
-                viewBox="0 0 24 24"
-                width="16"
-                height="16"
-                stroke="currentColor"
-                stroke-width="2"
-                fill="none"
-                style="margin-left: 0.25rem"
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </a>
-          </div>
-
-          <div class="service-card card-white">
-            <div class="service-icon text-orange-500">
-              <svg
-                viewBox="0 0 24 24"
-                width="40"
-                height="40"
-                stroke="currentColor"
-                stroke-width="1.5"
-                fill="none"
-              >
-                <path d="M12 3v12l8.5 5.5" />
-                <path d="M12 3v12l-8.5 5.5" />
-                <path d="M16 7.1L12 3 8 7.1" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-2 text-gray-900">
-              Brand Development
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Create a compelling brand identity that resonates with your ideal
-              clients.
-            </p>
-            <a
-              href="#"
-              class="text-orange-500 hover:underline inline-flex items-center"
-            >
-              Learn more
+            <a href="#contact" class="inline-flex items-center">
+              Start Your Journey
               <svg
                 viewBox="0 0 24 24"
                 width="16"
@@ -1067,9 +1119,30 @@
           </div>
         </div>
 
+        <div class="section-header" style="margin-top: 4rem">
+          <h2 class="section-subtitle">
+            From Personal Growth to Broader Excellence
+          </h2>
+          <p class="section-description">
+            While our core focus begins with your individual transformation,
+            this journey naturally equips you to lead and influence on a larger
+            scale. The self-mastery, clarity, and value-driven approach you
+            cultivate are directly applicable to guiding teams and transforming
+            organizations.
+          </p>
+          <br />
+          <p class="section-description">
+            As you grow, your capacity to champion strategic initiatives
+            expands. LevelUp Ltd also offers expertise in e-courses for
+            continued learning, and for organizations, services in business
+            intelligence, operational excellence, and value-aligned
+            transformation.
+          </p>
+        </div>
+
         <div class="text-center mt-8">
           <a href="#contact" class="btn btn-orange btn-lg">
-            Explore All Services
+            Explore Our Programs
             <svg
               viewBox="0 0 24 24"
               width="16"
@@ -1115,30 +1188,35 @@
               class="about-label-line"
               style="background-color: #f97316"
             ></span>
-            <span class="text-orange-600"
-              >Strategic Excellence. Proven Results</span
-            >
+            <span class="text-orange-600">Inside-Out Leadership</span>
           </div>
 
-          <h2 class="about-title">
-            Authentic Digital Growth & Marketing Strategy.
-          </h2>
+          <h2 class="about-title">Why Start with Personal Transformation?</h2>
 
           <p class="about-description">
-            I help ambitious solopreneurs build authentic connections and
-            achieve measurable growth. My strategies map the customer journey,
-            driving qualified leads, increased conversions, and sustainable ROI.
+            Because the journey to becoming a truly effective leader—one who can
+            drive meaningful results, inspire teams, and spearhead successful
+            organizational change—begins with deep inner work. When you commit
+            to understanding and developing yourself, you build a foundation of
+            self-awareness and strategic clarity that amplifies your every
+            action.
+          </p>
+
+          <p class="about-description">
+            This "inside-out" approach ensures that your growth is authentic,
+            sustainable, and creates a ripple effect, influencing not just your
+            own path but also the potential of those you lead.
           </p>
 
           <div class="about-author">
             <img
               src="/api/placeholder/64/64"
-              alt="Your Name"
+              alt="Leadership Coach"
               class="author-image"
             />
             <div class="author-info">
-              <h4>Your Name</h4>
-              <p>Founder & Growth Strategist</p>
+              <h4>Your Executive Coach</h4>
+              <p>Transformation Specialist & Leadership Mentor</p>
             </div>
           </div>
         </div>
@@ -1161,9 +1239,11 @@
           </svg>
 
           <blockquote class="testimonial-quote">
-            "Working with [Your Name] transformed my business. Their strategic
-            approach to digital marketing gave me clarity and a roadmap to
-            growth that I've been missing. The results speak for themselves!"
+            "The transformation I experienced working with LevelUp Ltd was
+            profound. Their approach to personal mastery gave me the clarity and
+            confidence I needed to lead my team through significant
+            organizational change. The investment in myself became the
+            foundation for everything else."
           </blockquote>
 
           <div class="testimonial-author">
@@ -1177,9 +1257,11 @@
                 class="testimonial-author-name"
                 style="color: #f97316; font-weight: 600"
               >
-                Jane Smith
+                Sarah Chen
               </div>
-              <div class="testimonial-author-title">CEO, Smith Enterprises</div>
+              <div class="testimonial-author-title">
+                VP of Operations, Tech Innovations
+              </div>
             </div>
           </div>
         </div>
@@ -1193,49 +1275,15 @@
       style="background: linear-gradient(135deg, #2563eb 0%, #f97316 100%)"
     >
       <div class="container contact-container">
-        <h2 class="contact-title">Ready to Grow Your Business?</h2>
+        <h2 class="contact-title">Ready to Unlock Your Full Potential?</h2>
         <p class="contact-description">
-          Schedule a free 30-minute consultation to discuss how we can work
-          together to achieve your goals.
+          Begin the most important change management journey—the one within
+          yourself. Discover how our executive coaching can help you step into
+          your most empowered leadership.
         </p>
 
         <div class="contact-buttons">
-          <a href="mailto:your@email.com" class="btn btn-white">
-            <svg
-              viewBox="0 0 24 24"
-              width="20"
-              height="20"
-              stroke="currentColor"
-              stroke-width="2"
-              fill="none"
-              style="margin-right: 0.5rem"
-            >
-              <path
-                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-              />
-              <polyline points="22,6 12,13 2,6" />
-            </svg>
-            Email Me
-          </a>
-
-          <a href="tel:5551234567" class="btn btn-blue">
-            <svg
-              viewBox="0 0 24 24"
-              width="20"
-              height="20"
-              stroke="currentColor"
-              stroke-width="2"
-              fill="none"
-              style="margin-right: 0.5rem"
-            >
-              <path
-                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012 4.18 2 2 0 014 2h3a2 2 0 012 1.72c.13.98.42 1.94.86 2.83a2 2 0 01-.45 2.11L8 10a16 16 0 006 6l1.8-1.8a2 2 0 012.41-.1c.84.4 1.74.66 2.67.78A2 2 0 0122 16.92z"
-              />
-            </svg>
-            Call Me
-          </a>
-
-          <a href="#" class="btn btn-orange">
+          <a href="#" class="btn btn-white">
             <svg
               viewBox="0 0 24 24"
               width="20"
@@ -1250,7 +1298,41 @@
               <line x1="8" y1="2" x2="8" y2="6" />
               <line x1="3" y1="10" x2="21" y2="10" />
             </svg>
-            Book a Call
+            Explore Our Coaching Programs
+          </a>
+
+          <a href="#about" class="btn btn-blue">
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+              style="margin-right: 0.5rem"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <polygon points="10 8 16 12 10 16 10 8" />
+            </svg>
+            Learn More About Our Approach
+          </a>
+
+          <a href="mailto:hello@levelup-ltd.com" class="btn btn-orange">
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+              style="margin-right: 0.5rem"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            Contact Us Today
           </a>
         </div>
       </div>
@@ -1271,30 +1353,27 @@
                   stroke-width="2"
                   fill="none"
                 >
-                  <path
-                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12s4.48 10 10 10 10-4.48 10-10z"
-                  />
-                  <path d="M8 14s1.5 2 4 2 4-2 4-2" />
-                  <line x1="9" y1="9" x2="9.01" y2="9" />
-                  <line x1="15" y1="9" x2="15.01" y2="9" />
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
                 </svg>
               </div>
-              <span class="font-bold">YourName</span>
+              <span class="font-bold">LevelUp Ltd</span>
             </div>
 
             <p class="footer-description">
-              Helping solopreneurs build authentic connections and achieve
-              measurable growth since 2020.
+              Empowering leaders through authentic personal transformation and
+              strategic clarity since 2020.
             </p>
           </div>
 
           <div class="footer-links">
             <div class="footer-links-column">
-              <h3>Quick Links</h3>
+              <h3>Navigation</h3>
               <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#services">Executive Coaching</a></li>
+                <li><a href="#about">Our Approach</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
@@ -1302,12 +1381,12 @@
             <div class="footer-links-column">
               <h3>Services</h3>
               <ul>
-                <li><a href="#">Business Strategy</a></li>
-                <li><a href="#">Digital Marketing</a></li>
+                <li><a href="#">Executive Coaching</a></li>
+                <li><a href="#">Leadership Development</a></li>
                 <li>
-                  <a href="#" style="color: #f97316">Brand Development</a>
+                  <a href="#" style="color: #f97316">Personal Transformation</a>
                 </li>
-                <li><a href="#">Website Design</a></li>
+                <li><a href="#">Organizational Excellence</a></li>
               </ul>
             </div>
 
@@ -1327,7 +1406,7 @@
                   />
                   <polyline points="22,6 12,13 2,6" />
                 </svg>
-                <a href="mailto:your@email.com">your@email.com</a>
+                <a href="mailto:hello@levelup-ltd.com">hello@levelup-ltd.com</a>
               </div>
               <div class="footer-contact-item">
                 <svg
@@ -1354,7 +1433,7 @@
             <script>
               document.write(new Date().getFullYear());
             </script>
-            YourName. All rights reserved.
+            LevelUp Ltd. All rights reserved.
           </p>
           <div class="footer-social">
             <a href="#">
@@ -1366,30 +1445,6 @@
               >
                 <path
                   d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"
-                />
-              </svg>
-            </a>
-            <a href="#">
-              <svg
-                width="20"
-                height="20"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124-4.09-.193-7.715-2.157-10.141-5.126-.427.722-.666 1.561-.666 2.457 0 1.819.957 3.401 2.351 4.271-.863-.025-1.664-.261-2.37-.638v.073c0 2.57 1.829 4.569 4.113 5.052-.43.124-.887.187-1.334.187-.332 0-.65-.033-.966-.092.673 2.075 2.608 3.596 4.905 3.637-1.795 1.407-4.053 2.248-6.529 2.248-.408 0-.823-.024-1.231-.073 2.323 1.49 5.076 2.376 8.034 2.376 9.635 0 14.917-7.99 14.917-14.918 0-.225-.005-.454-.014-.672.975-.702 1.848-1.576 2.519-2.572l-.049-.02z"
-                />
-              </svg>
-            </a>
-            <a href="#">
-              <svg
-                width="20"
-                height="20"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
                 />
               </svg>
             </a>
