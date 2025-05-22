@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - LevelUp Ltd - Executive Coaching</title>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        color: #333;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      /* Utility classes - same as home page */
+      .bg-blue-50 {
+        background-color: #f0f7ff;
+      }
+      .bg-blue-600 {
+        background-color: #2563eb;
+      }
+      .bg-blue-800 {
+        background-color: #1e40af;
+      }
+      .bg-orange-500 {
+        background-color: #f97316;
+      }
+      .bg-orange-600 {
+        background-color: #ea580c;
+      }
+      .bg-gray-50 {
+        background-color: #f9fafb;
+      }
+      .bg-gray-900 {
+        background-color: #111827;
+      }
+      .text-white {
+        color: #fff;
+      }
+      .text-blue-100 {
+        color: #dbeafe;
+      }
+      .text-blue-200 {
+        color: #bfdbfe;
+      }
+      .text-blue-600 {
+        color: #2563eb;
+      }
+      .text-orange-500 {
+        color: #f97316;
+      }
+      .text-orange-600 {
+        color: #ea580c;
+      }
+      .text-gray-400 {
+        color: #9ca3af;
+      }
+      .text-gray-600 {
+        color: #4b5563;
+      }
+      .text-gray-700 {
+        color: #374151;
+      }
+      .text-gray-900 {
+        color: #111827;
+      }
+      .font-medium {
+        font-weight: 500;
+      }
+      .font-semibold {
+        font-weight: 600;
+      }
+      .font-bold {
+        font-weight: 700;
+      }
+      .border {
+        border: 1px solid #e5e7eb;
+      }
+      .border-t {
+        border-top: 1px solid;
+      }
+      .border-b {
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .border-gray-800 {
+        border-color: #1f2937;
+      }
+      .rounded-md {
+        border-radius: 0.375rem;
+      }
+      .rounded-lg {
+        border-radius: 0.5rem;
+      }
+      .rounded-full {
+        border-radius: 9999px;
+      }
+
+      /* Header - same as home page */
+      header {
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo-icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 9999px;
+        background-color: #2563eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo-text {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #2563eb;
+      }
+
+      .nav-links a {
+        margin-left: 1.5rem;
+        color: #4b5563;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: #f97316;
+      }
+
+      .header-cta {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .phone-link {
+        display: none;
+        align-items: center;
+        gap: 0.25rem;
+        color: #2563eb;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 1rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+
+      .btn-primary {
+        background-color: #2563eb;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: #1d4ed8;
+      }
+
+      .btn-orange {
+        background-color: #f97316;
+        color: white;
+      }
+
+      .btn-orange:hover {
+        background-color: #ea580c;
+      }
+
+      .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+      }
+
+      /* Page Header */
+      .page-header {
+        background-color: #f0f7ff;
+        padding: 3rem 0;
+        text-align: center;
+      }
+
+      .page-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 1rem;
+      }
+
+      .page-description {
+        font-size: 1.25rem;
+        color: #4b5563;
+        max-width: 48rem;
+        margin: 0 auto;
+      }
+
+      /* About Content Sections */
+      .section {
+        padding: 4rem 0;
+      }
+
+      .section:nth-child(even) {
+        background-color: #f9fafb;
+      }
+
+      .section-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .section-inner {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .section-image,
+        .section-content {
+          flex: 1;
+        }
+      }
+
+      .section-image {
+        text-align: center;
+      }
+
+      .section-image img {
+        max-width: 100%;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .section-title {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-paragraph {
+        color: #4b5563;
+        margin-bottom: 1rem;
+        line-height: 1.7;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      @media (min-width: 640px) {
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .team-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .team-member {
+        text-align: center;
+      }
+
+      .team-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 1rem;
+        background-color: #d1d5db;
+      }
+
+      .team-name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .team-title {
+        color: #4b5563;
+        margin-bottom: 0.75rem;
+      }
+
+      /* Footer - same as home page */
+      .footer {
+        background-color: #111827;
+        color: white;
+        padding: 3rem 0;
+      }
+
+      .footer-container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer-main {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .footer-logo-icon {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 9999px;
+        background-color: #2563eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.5rem;
+      }
+
+      .footer-description {
+        color: #9ca3af;
+        max-width: 20rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      .footer-links-column h3 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .footer-links-column ul {
+        list-style: none;
+      }
+
+      .footer-links-column li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links-column a {
+        color: #9ca3af;
+        transition: color 0.2s;
+      }
+
+      .footer-links-column a:hover {
+        color: white;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        align-items: center;
+        color: #9ca3af;
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-contact-item svg {
+        margin-right: 0.5rem;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #1f2937;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-copyright {
+        color: #9ca3af;
+        margin-bottom: 1rem;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .footer-social a {
+        color: #9ca3af;
+        transition: color 0.2s;
+      }
+
+      .footer-social a:hover {
+        color: white;
+      }
+
+      /* Responsive styles */
+      @media (min-width: 768px) {
+        .nav-links {
+          display: flex;
+        }
+
+        .phone-link {
+          display: flex;
+        }
+
+        .footer-main {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .footer-info {
+          margin-right: 3rem;
+        }
+
+        .footer-links {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .footer-bottom {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .footer-copyright {
+          margin-bottom: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="border-b">
+      <div class="container header-container">
+        <div class="logo">
+          <div class="logo-icon">
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              stroke="white"
+              stroke-width="2"
+              fill="none"
+            >
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <span class="logo-text">LevelUp Ltd</span>
+        </div>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#services">Coaching</a>
+          <a href="about.html" class="text-orange-500">About</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+
+        <div class="header-cta">
+          <div class="phone-link">
+            <svg
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012 4.18 2 2 0 014 2h3a2 2 0 012 1.72c.13.98.42 1.94.86 2.83a2 2 0 01-.45 2.11L8 10a16 16 0 006 6l1.8-1.8a2 2 0 012.41-.1c.84.4 1.74.66 2.67.78A2 2 0 0122 16.92z"
+              />
+            </svg>
+            <span class="text-sm">555-123-4567</span>
+          </div>
+          <a href="index.html#contact" class="btn btn-primary">
+            <span>Start Your Journey</span>
+            <svg
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+              style="margin-left: 0.5rem"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">About LevelUp Ltd</h1>
+        <p class="page-description">
+          Our story, mission, and the transformation-focused approach that
+          drives everything we do.
+        </p>
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-inner">
+          <div class="section-content">
+            <h2 class="section-title">Our Story</h2>
+            <p class="section-paragraph">
+              Founded in 2020, LevelUp Ltd was born from a profound insight:
+              true organizational transformation begins with personal
+              transformation. Our founder, after years in corporate leadership
+              roles, recognized that most change initiatives fail not because of
+              poor strategy, but because of misalignment between personal values
+              and organizational goals.
+            </p>
+            <p class="section-paragraph">
+              This realization led to the development of our inside-out approach
+              to executive coaching and leadership development. We've since
+              guided hundreds of leaders across industries to discover their
+              authentic leadership identity and translate that clarity into
+              meaningful action.
+            </p>
+          </div>
+          <div class="section-image">
+            <img
+              src="https://via.placeholder.com/500x350"
+              alt="LevelUp Ltd Founding"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Approach Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-inner">
+          <div class="section-image">
+            <img
+              src="https://via.placeholder.com/500x350"
+              alt="Our Coaching Methodology"
+            />
+          </div>
+          <div class="section-content">
+            <h2 class="section-title">Our Transformation Methodology</h2>
+            <p class="section-paragraph">
+              At the heart of our coaching practice is a comprehensive
+              methodology that addresses the whole person. We begin with deep
+              self-awareness work, helping leaders connect with their core
+              values and purpose. From this foundation, we guide the development
+              of clarity around vision, strategic thinking, and decision-making
+              frameworks.
+            </p>
+            <p class="section-paragraph">
+              This personal transformation naturally flows into enhanced
+              leadership capacity. As our clients develop their authentic
+              leadership identity, they simultaneously build the skills needed
+              to lead teams through change, nurture organizational culture, and
+              drive results aligned with both personal and company values.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="section bg-blue-50">
+      <div class="container">
+        <h2
+          class="section-title"
+          style="text-align: center; margin-bottom: 2rem"
+        >
+          Meet Our Team
+        </h2>
+        <p
+          class="section-paragraph"
+          style="text-align: center; max-width: 48rem; margin: 0 auto 2rem"
+        >
+          Our team of executive coaches and leadership specialists brings
+          diverse experience from corporate leadership, organizational
+          psychology, and personal development disciplines.
+        </p>
+
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="team-image"></div>
+            <h3 class="team-name">Alexandra Mitchell</h3>
+            <p class="team-title">Founder & Lead Executive Coach</p>
+            <p>
+              Former C-suite executive with 20+ years experience in
+              organizational transformation and leadership development.
+            </p>
+          </div>
+
+          <div class="team-member">
+            <div class="team-image"></div>
+            <h3 class="team-name">Marcus Chen</h3>
+            <p class="team-title">Executive Coach & Strategy Specialist</p>
+            <p>
+              Combines deep business strategy expertise with coaching
+              methodology to help leaders align purpose with impact.
+            </p>
+          </div>
+
+          <div class="team-member">
+            <div class="team-image"></div>
+            <h3 class="team-name">Sophia Rodriguez</h3>
+            <p class="team-title">Leadership Development Facilitator</p>
+            <p>
+              Specializes in emotional intelligence and resilience training for
+              high-performance leadership.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-inner">
+          <div class="section-content">
+            <h2 class="section-title">Our Values</h2>
+            <p class="section-paragraph">
+              <strong class="text-blue-600">Authenticity:</strong> We believe
+              that true leadership power comes from alignment with your
+              authentic self.
+            </p>
+            <p class="section-paragraph">
+              <strong class="text-blue-600">Transformation:</strong> We're
+              committed to deep, sustainable change that addresses root causes
+              rather than symptoms.
+            </p>
+            <p class="section-paragraph">
+              <strong class="text-blue-600">Integration:</strong> We recognize
+              that effective leadership integrates personal growth with
+              professional excellence.
+            </p>
+            <p class="section-paragraph">
+              <strong class="text-blue-600">Impact:</strong> We measure success
+              by the meaningful difference our clients make in their
+              organizations and beyond.
+            </p>
+          </div>
+          <div class="section-image">
+            <img src="https://via.placeholder.com/500x350" alt="Our Values" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      class="section"
+      style="
+        background: linear-gradient(135deg, #2563eb 0%, #f97316 100%);
+        color: white;
+      "
+    >
+      <div class="container" style="text-align: center">
+        <h2 class="section-title" style="color: white">Ready to Learn More?</h2>
+        <p
+          class="section-paragraph"
+          style="color: #dbeafe; max-width: 48rem; margin: 0 auto 2rem"
+        >
+          Connect with our team to discover how our executive coaching programs
+          can transform your leadership and impact.
+        </p>
+        <a href="index.html#contact" class="btn btn-white btn-lg">
+          Contact Us Today
+          <svg
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            stroke="currentColor"
+            stroke-width="2"
+            fill="none"
+            style="margin-left: 0.5rem"
+          >
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-main">
+          <div class="footer-info">
+            <div class="footer-logo">
+              <div class="footer-logo-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"
+                >
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <span class="font-bold">LevelUp Ltd</span>
+            </div>
+
+            <p class="footer-description">
+              Empowering leaders through authentic personal transformation and
+              strategic clarity since 2020.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-links-column">
+              <h3>Navigation</h3>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Executive Coaching</a></li>
+                <li><a href="about.html">Our Approach</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-column">
+              <h3>Services</h3>
+              <ul>
+                <li><a href="index.html#services">Executive Coaching</a></li>
+                <li>
+                  <a href="index.html#services">Leadership Development</a>
+                </li>
+                <li>
+                  <a href="index.html#services" style="color: #f97316"
+                    >Personal Transformation</a
+                  >
+                </li>
+                <li>
+                  <a href="index.html#services">Organizational Excellence</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-links-column">
+              <h3>Contact</h3>
+              <div class="footer-contact-item">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <a href="mailto:hello@levelup-ltd.com">hello@levelup-ltd.com</a>
+              </div>
+              <div class="footer-contact-item">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012 4.18 2 2 0 014 2h3a2 2 0 012 1.72c.13.98.42 1.94.86 2.83a2 2 0 01-.45 2.11L8 10a16 16 0 006 6l1.8-1.8a2 2 0 012.41-.1c.84.4 1.74.66 2.67.78A2 2 0 0122 16.92z"
+                  />
+                </svg>
+                <a href="tel:5551234567">555-123-4567</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            ©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            LevelUp Ltd. All rights reserved.
+          </p>
+          <div class="footer-social">
+            <a href="#">
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"
+                />
+              </svg>
+            </a>
+            <a href="#">
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Current year for copyright
+      document.addEventListener("DOMContentLoaded", function () {
+        const yearElements = document.querySelectorAll(".current-year");
+        yearElements.forEach(function (element) {
+          element.textContent = new Date().getFullYear();
+        });
+      });
+    </script>
+  </body>
+</html>
