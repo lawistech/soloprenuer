@@ -440,20 +440,15 @@
         display: flex;
         align-items: flex-start;
         margin-bottom: 1rem;
-        padding-left: 1.5rem;
         position: relative;
       }
 
+      /* Remove the ::before pseudo-element that was creating the bullet points */
       .service-list li::before {
-        content: "•";
-        color: #f97316;
-        font-weight: bold;
-        position: absolute;
-        left: 0;
-        top: 0;
+        content: none;
       }
 
-      .card-blue .service-list li::before {
+      .card-blue .service-list li svg {
         color: #bfdbfe;
       }
 
@@ -1062,20 +1057,77 @@
             <p>Through our dedicated coaching, we help you:</p>
             <ul class="service-list">
               <li>
-                <strong>Profound Self-Mastery & Clarity:</strong> Gain
-                transformative understanding of your self, identity, and purpose
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                  style="min-width: 18px; margin-right: 0.5rem; flex-shrink: 0"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>
+                  <strong>Profound Self-Mastery & Clarity:</strong> Gain
+                  transformative understanding of your self, identity, and
+                  purpose
+                </span>
               </li>
               <li>
-                <strong>Enhanced Leadership Capacity:</strong> Acquire tools to
-                manage yourself and inspire teams effectively
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                  style="min-width: 18px; margin-right: 0.5rem; flex-shrink: 0"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span>
+                  <strong>Enhanced Leadership Capacity:</strong> Acquire tools
+                  to manage yourself and inspire teams effectively
+                </span>
               </li>
               <li>
-                <strong>Strategic Alignment:</strong> Bridge personal values
-                with professional goals
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                  style="min-width: 18px; margin-right: 0.5rem; flex-shrink: 0"
+                >
+                  <path d="M12 20V10"></path>
+                  <path d="M18 14l-6-6-6 6"></path>
+                </svg>
+                <span>
+                  <strong>Strategic Alignment:</strong> Bridge personal values
+                  with professional goals
+                </span>
               </li>
               <li>
-                <strong>Unshakeable Confidence:</strong> Develop resilience in
-                decision-making and change leadership
+                <svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                  style="min-width: 18px; margin-right: 0.5rem; flex-shrink: 0"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 8l4 4-4 4-4-4 4-4z"></path>
+                </svg>
+                <span>
+                  <strong>Unshakeable Confidence:</strong> Develop resilience in
+                  decision-making and change leadership
+                </span>
               </li>
             </ul>
           </div>
@@ -1140,7 +1192,10 @@
           </p>
         </div>
 
-        <div class="text-center mt-8">
+        <div
+          class="text-center mt-8"
+          style="display: flex; justify-content: center; align-items: center"
+        >
           <a href="#contact" class="btn btn-orange btn-lg">
             Explore Our Programs
             <svg
