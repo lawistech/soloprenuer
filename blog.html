@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The LevelUp Ledger - Insights for Transformational Growth</title>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        color: #333;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      /* Utility classes - same as other pages */
+      .bg-blue-50 {
+        background-color: #f0f7ff;
+      }
+      .bg-blue-600 {
+        background-color: #2563eb;
+      }
+      .bg-blue-800 {
+        background-color: #1e40af;
+      }
+      .bg-orange-500 {
+        background-color: #f97316;
+      }
+      .bg-orange-600 {
+        background-color: #ea580c;
+      }
+      .bg-gray-50 {
+        background-color: #f9fafb;
+      }
+      .bg-gray-900 {
+        background-color: #111827;
+      }
+      .text-white {
+        color: #fff;
+      }
+      .text-blue-100 {
+        color: #dbeafe;
+      }
+      .text-blue-200 {
+        color: #bfdbfe;
+      }
+      .text-blue-600 {
+        color: #2563eb;
+      }
+      .text-orange-500 {
+        color: #f97316;
+      }
+      .text-orange-600 {
+        color: #ea580c;
+      }
+      .text-gray-400 {
+        color: #9ca3af;
+      }
+      .text-gray-600 {
+        color: #4b5563;
+      }
+      .text-gray-700 {
+        color: #374151;
+      }
+      .text-gray-900 {
+        color: #111827;
+      }
+      .font-medium {
+        font-weight: 500;
+      }
+      .font-semibold {
+        font-weight: 600;
+      }
+      .font-bold {
+        font-weight: 700;
+      }
+      .border {
+        border: 1px solid #e5e7eb;
+      }
+      .border-t {
+        border-top: 1px solid;
+      }
+      .border-b {
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .border-gray-800 {
+        border-color: #1f2937;
+      }
+      .rounded-md {
+        border-radius: 0.375rem;
+      }
+      .rounded-lg {
+        border-radius: 0.5rem;
+      }
+      .rounded-full {
+        border-radius: 9999px;
+      }
+
+      /* Header - same as other pages */
+      header {
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .logo-icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 9999px;
+        background-color: #2563eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo-text {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #2563eb;
+      }
+
+      .nav-links a {
+        margin-left: 1.5rem;
+        color: #4b5563;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: #f97316;
+      }
+
+      .header-cta {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .phone-link {
+        display: none;
+        align-items: center;
+        gap: 0.25rem;
+        color: #2563eb;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 1rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        transition: all 0.2s;
+      }
+
+      .btn-primary {
+        background-color: #2563eb;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: #1d4ed8;
+      }
+
+      .btn-orange {
+        background-color: #f97316;
+        color: white;
+      }
+
+      .btn-orange:hover {
+        background-color: #ea580c;
+      }
+
+      .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+      }
+
+      /* Page Header */
+      .page-header {
+        background-color: #f0f7ff;
+        padding: 3rem 0;
+        text-align: center;
+      }
+
+      .page-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 1rem;
+      }
+
+      .page-description {
+        font-size: 1.25rem;
+        color: #4b5563;
+        max-width: 48rem;
+        margin: 0 auto;
+      }
+
+      /* Blog Content Sections */
+      .section {
+        padding: 4rem 0;
+      }
+
+      .section:nth-child(even) {
+        background-color: #f9fafb;
+      }
+
+      .section-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.875rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 1.5rem;
+      }
+
+      .section-paragraph {
+        color: #4b5563;
+        margin-bottom: 1rem;
+        line-height: 1.7;
+      }
+
+      /* Blog specific styles */
+      .blog-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .blog-container {
+          flex-direction: row;
+        }
+
+        .blog-main {
+          flex: 2;
+        }
+
+        .blog-sidebar {
+          flex: 1;
+        }
+      }
+
+      /* Featured Post */
+      .featured-post {
+        background-color: white;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+      }
+
+      .featured-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .featured-content {
+        padding: 1.5rem;
+      }
+
+      .featured-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #111827;
+      }
+
+      .featured-excerpt {
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Post cards */
+      .post-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      @media (min-width: 640px) {
+        .post-list {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      .post-card {
+        background-color: white;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+
+      .post-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .post-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .post-content {
+        padding: 1.5rem;
+      }
+
+      .post-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #111827;
+      }
+
+      .post-meta {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        font-size: 0.875rem;
+        color: #6b7280;
+      }
+
+      .post-category {
+        background-color: #f0f7ff;
+        color: #2563eb;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+
+      .post-excerpt {
+        color: #4b5563;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Sidebar styles */
+      .blog-sidebar {
+        position: sticky;
+        top: 2rem;
+      }
+
+      .sidebar-box {
+        background-color: white;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .sidebar-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #111827;
+      }
+
+      .search-form {
+        display: flex;
+        margin-bottom: 1rem;
+      }
+
+      .search-input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #d1d5db;
+        border-right: none;
+        border-top-left-radius: 0.375rem;
+        border-bottom-left-radius: 0.375rem;
+        font-family: inherit;
+        font-size: 0.875rem;
+      }
+
+      .search-button {
+        background-color: #2563eb;
+        color: white;
+        border: none;
+        padding: 0 0.75rem;
+        border-top-right-radius: 0.375rem;
+        border-bottom-right-radius: 0.375rem;
+        cursor: pointer;
+      }
+
+      .category-list,
+      .recent-list,
+      .archive-list {
+        list-style: none;
+      }
+
+      .category-list li,
+      .recent-list li,
+      .archive-list li {
+        margin-bottom: 0.75rem;
+      }
+
+      .category-list a,
+      .recent-list a,
+      .archive-list a {
+        color: #4b5563;
+        transition: color 0.2s;
+      }
+
+      .category-list a:hover,
+      .recent-list a:hover,
+      .archive-list a:hover {
+        color: #2563eb;
+      }
+
+      .category-count {
+        background-color: #f3f4f6;
+        color: #6b7280;
+        padding: 0.125rem 0.375rem;
+        border-radius: 0.25rem;
+        font-size: 0.75rem;
+        margin-left: 0.5rem;
+      }
+
+      .newsletter-box {
+        background-color: #f0f7ff;
+      }
+
+      .newsletter-input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.375rem;
+        font-family: inherit;
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Footer - same as other pages */
+      .footer {
+        background-color: #111827;
+        color: white;
+        padding: 3rem 0;
+      }
+
+      .footer-container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer-main {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .footer-logo-icon {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 9999px;
+        background-color: #2563eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.5rem;
+      }
+
+      .footer-description {
+        color: #9ca3af;
+        max-width: 20rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      .footer-links-column h3 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .footer-links-column ul {
+        list-style: none;
+      }
+
+      .footer-links-column li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links-column a {
+        color: #9ca3af;
+        transition: color 0.2s;
+      }
+
+      .footer-links-column a:hover {
+        color: white;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        align-items: center;
+        color: #9ca3af;
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-contact-item svg {
+        margin-right: 0.5rem;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #1f2937;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-copyright {
+        color: #9ca3af;
+        margin-bottom: 1rem;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .footer-social a {
+        color: #9ca3af;
+        transition: color 0.2s;
+      }
+
+      .footer-social a:hover {
+        color: white;
+      }
+
+      /* Responsive styles */
+      @media (min-width: 768px) {
+        .section-inner {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .nav-links {
+          display: flex;
+        }
+
+        .phone-link {
+          display: flex;
+        }
+
+        .footer-main {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .footer-info {
+          margin-right: 3rem;
+        }
+
+        .footer-links {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .footer-bottom {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .footer-copyright {
+          margin-bottom: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="border-b">
+      <div class="container header-container">
+        <div class="logo">
+          <div class="logo-icon">
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              stroke="white"
+              stroke-width="2"
+              fill="none"
+            >
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <span class="logo-text">LevelUp Ltd</span>
+        </div>
+
+        <div class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="detail-services.html">Detail Services</a>
+          <a href="services-overview.html">Services Overview</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog.html" class="text-orange-500">Blog</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section
+      class="page-header"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      "
+    >
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(240, 247, 255, 0.85);
+        "
+      ></div>
+      <div class="container" style="position: relative; z-index: 1">
+        <h1 class="page-title">
+          The LevelUp Ledger: Clarity, Strategy, and Transformation in Action
+        </h1>
+        <p class="page-description">
+          Welcome to Your Resource for Deeper Understanding and Inspired
+          Leadership.
+        </p>
+      </div>
+    </section>
+
+    <!-- Blog Introduction Section -->
+    <section class="section">
+      <div class="container">
+        <div
+          class="section-paragraph"
+          style="text-align: center; max-width: 48rem; margin: 0 auto 2rem"
+        >
+          At LevelUp Ltd, we're passionate about empowering leaders and
+          organizations to turn complexity into clear, value-driven action. The
+          LevelUp Ledger is where we share our insights, expert perspectives,
+          and actionable strategies designed to foster profound self-mastery,
+          enhance leadership capacity, and drive sustainable, value-led
+          transformation.
+          <br /><br />
+          Our articles aim to establish authority and build trust by providing
+          valuable content. Explore our thoughts on executive development,
+          business intelligence, change management, and operational
+          excellence—all curated to help you achieve purposeful and resilient
+          success.
+        </div>
+
+        <div class="blog-container">
+          <div class="blog-main">
+            <!-- Featured Insight -->
+            <h2 class="section-title">Featured Insight</h2>
+            <div class="featured-post">
+              <img
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                alt="Leadership in Crisis Times"
+                class="featured-image"
+              />
+              <div class="featured-content">
+                <h3 class="featured-title">
+                  <a href="#"
+                    >The Resilient Leader: Navigating Uncertainty with Purpose
+                    and Clarity</a
+                  >
+                </h3>
+                <p class="featured-excerpt">
+                  In times of unprecedented change, leaders who cultivate inner
+                  resilience create stable environments where teams can thrive.
+                  Discover the five foundational practices that build unshakable
+                  leadership presence even during turbulent times.
+                </p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+
+            <!-- Latest Articles -->
+            <h2 class="section-title">Latest Articles</h2>
+            <div class="post-list">
+              <!-- Article 1 -->
+              <div class="post-card">
+                <img
+                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                  alt="Value-Led Transformation"
+                  class="post-image"
+                />
+                <div class="post-content">
+                  <h3 class="post-title">
+                    <a href="#"
+                      >Beyond Profit: How Value-Led Transformation Drives
+                      Sustainable Success</a
+                    >
+                  </h3>
+                  <div class="post-meta">
+                    <span>Published: May 15, 2023</span>
+                    <span class="post-category">Value-Led Transformation</span>
+                  </div>
+                  <p class="post-excerpt">
+                    Discover how organizations that align their operations with
+                    core values consistently outperform competitors while
+                    creating meaningful impact.
+                  </p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+
+              <!-- Article 2 -->
+              <div class="post-card">
+                <img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+                  alt="Team Excellence"
+                  class="post-image"
+                />
+                <div class="post-content">
+                  <h3 class="post-title">
+                    <a href="#"
+                      >The Self-Mastery Advantage: Personal Growth as a
+                      Leadership Imperative</a
+                    >
+                  </h3>
+                  <div class="post-meta">
+                    <span>Published: April 28, 2023</span>
+                    <span class="post-category">Self-Mastery</span>
+                  </div>
+                  <p class="post-excerpt">
+                    Leaders who invest in their own development create a ripple
+                    effect throughout their organizations. Learn the three
+                    practices for accelerated personal growth.
+                  </p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+
+              <!-- Article 3 -->
+              <div class="post-card">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                  alt="Data Analytics"
+                  class="post-image"
+                />
+                <div class="post-content">
+                  <h3 class="post-title">
+                    <a href="#"
+                      >Turning Data into Decisions: The Executive's Guide to
+                      Business Intelligence</a
+                    >
+                  </h3>
+                  <div class="post-meta">
+                    <span>Published: April 12, 2023</span>
+                    <span class="post-category">Business Intelligence</span>
+                  </div>
+                  <p class="post-excerpt">
+                    How today's leaders can leverage data analytics to make more
+                    confident decisions while avoiding common pitfalls in
+                    interpretation.
+                  </p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+
+              <!-- Article 4 -->
+              <div class="post-card">
+                <img
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                  alt="Change Management"
+                  class="post-image"
+                />
+                <div class="post-content">
+                  <h3 class="post-title">
+                    <a href="#"
+                      >The Human Side of Change: Building Resilient Teams During
+                      Transformation</a
+                    >
+                  </h3>
+                  <div class="post-meta">
+                    <span>Published: March 30, 2023</span>
+                    <span class="post-category">Change Management</span>
+                  </div>
+                  <p class="post-excerpt">
+                    Successful organizational change requires more than process
+                    updates—it demands emotional intelligence and careful
+                    attention to team dynamics.
+                  </p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <div
+              style="display: flex; justify-content: center; margin-top: 2rem"
+            >
+              <a href="#" class="btn btn-primary" style="margin-right: 0.5rem"
+                >Previous</a
+              >
+              <a href="#" class="btn btn-primary" style="margin-left: 0.5rem"
+                >Next</a
+              >
+            </div>
+          </div>
+
+          <!-- Blog Sidebar -->
+          <div class="blog-sidebar">
+            <!-- Search -->
+            <div class="sidebar-box">
+              <h3 class="sidebar-title">Search Articles</h3>
+              <form class="search-form">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  class="search-input"
+                />
+                <button type="submit" class="search-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  >
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </button>
+              </form>
+            </div>
+
+            <!-- Categories -->
+            <div class="sidebar-box">
+              <h3 class="sidebar-title">Categories</h3>
+              <ul class="category-list">
+                <li>
+                  <a href="#"
+                    >Executive Coaching & Leadership
+                    <span class="category-count">8</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >Self-Mastery & Personal Development
+                    <span class="category-count">12</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >Business Intelligence & Analytics
+                    <span class="category-count">6</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >Value-Led Transformation
+                    <span class="category-count">9</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >Change Management <span class="category-count">7</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >Operational Excellence
+                    <span class="category-count">5</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >Talent Optimization
+                    <span class="category-count">4</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >Thought Leadership
+                    <span class="category-count">10</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Recent Posts -->
+            <div class="sidebar-box">
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <ul class="recent-list">
+                <li>
+                  <a href="#"
+                    >The Resilient Leader: Navigating Uncertainty with Purpose
+                    and Clarity</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >Beyond Profit: How Value-Led Transformation Drives
+                    Sustainable Success</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >The Self-Mastery Advantage: Personal Growth as a Leadership
+                    Imperative</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Archive -->
+            <div class="sidebar-box">
+              <h3 class="sidebar-title">Archive</h3>
+              <ul class="archive-list">
+                <li>
+                  <a href="#">May 2023 <span class="category-count">4</span></a>
+                </li>
+                <li>
+                  <a href="#"
+                    >April 2023 <span class="category-count">6</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >March 2023 <span class="category-count">5</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >February 2023 <span class="category-count">7</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >January 2023 <span class="category-count">3</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="sidebar-box newsletter-box">
+              <h3 class="sidebar-title">Stay Connected</h3>
+              <p style="margin-bottom: 1rem">
+                Want to receive our latest insights directly to your inbox?
+              </p>
+              <form>
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  class="newsletter-input"
+                  required
+                />
+                <button
+                  type="submit"
+                  class="btn btn-orange"
+                  style="width: 100%"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-main">
+          <div class="footer-info">
+            <div class="footer-logo">
+              <div class="footer-logo-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  stroke="white"
+                  stroke-width="2"
+                  fill="none"
+                >
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <span class="font-bold">LevelUp Ltd</span>
+            </div>
+
+            <p class="footer-description">
+              Empowering leaders through authentic personal transformation and
+              strategic clarity since 2020.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-links-column">
+              <h3>Navigation</h3>
+              <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services-overview.html">Our Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-column">
+              <h3>Services</h3>
+              <ul>
+                <li><a href="detail-services.html">Executive Coaching</a></li>
+                <li>
+                  <a href="detail-services.html">Leadership Development</a>
+                </li>
+                <li>
+                  <a href="detail-services.html" style="color: #f97316"
+                    >Personal Transformation</a
+                  >
+                </li>
+                <li>
+                  <a href="detail-services.html">Organizational Excellence</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-links-column">
+              <h3>Contact</h3>
+              <div class="footer-contact-item">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <a href="mailto:connect@levelupltd.com"
+                  >connect@levelupltd.com</a
+                >
+              </div>
+              <div class="footer-contact-item">
+                <svg
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012 4.18 2 2 0 014 2h3a2 2 0 012 1.72c.13.98.42 1.94.86 2.83a2 2 0 01-.45 2.11L8 10a16 16 0 006 6l1.8-1.8a2 2 0 012.41-.1c.84.4 1.74.66 2.67.78A2 2 0 0122 16.92z"
+                  />
+                </svg>
+                <a href="tel:5551234567">555-123-4567</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            ©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            LevelUp Ltd. All rights reserved.
+          </p>
+          <div class="footer-social">
+            <a href="#">
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"
+                />
+              </svg>
+            </a>
+            <a href="#">
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Form submission handling for search and newsletter
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchForm = document.querySelector(".search-form");
+        if (searchForm) {
+          searchForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Search functionality would be implemented here.");
+          });
+        }
+
+        const newsletterForm = document.querySelector(".newsletter-box form");
+        if (newsletterForm) {
+          newsletterForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Thank you for subscribing to our newsletter!");
+            newsletterForm.reset();
+          });
+        }
+
+        // Current year for copyright
+        const yearElements = document.querySelectorAll(".current-year");
+        yearElements.forEach(function (element) {
+          element.textContent = new Date().getFullYear();
+        });
+      });
+    </script>
+  </body>
+</html>
